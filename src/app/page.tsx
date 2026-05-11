@@ -16,8 +16,8 @@ export default function Home() {
       <CarGallery />
       <About />
       <HowItWorks />
-      <Services />
       <Team />
+      <Services />
       <PhotoGallery />
       <Reviews />
       <FAQ />
