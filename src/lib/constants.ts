@@ -32,7 +32,7 @@ export const SITE = {
 
 export const IMAGES = {
   heroCar: "/1767029764837.jpeg",
-  dealership: "/herosectionimg.jpg",
+  dealership: "/ueber-uns.jpg",
   rami: "/chef.png",
   ahmad: "/chefbaba.png",
 } as const;
