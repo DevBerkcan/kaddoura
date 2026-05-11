@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #003057;
+  --primary-light: #0a4a7a;
+  --primary-dark: #001f3a;
+  --secondary: #f5f5f7;
+  --tertiary: #111111;
+  --neutral: #76777a;
+  --neutral-light: #a0a1a3;
+  --white: #ffffff;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-muted: #f7f8fa;
+  --border: #e5e7eb;
+  --text-body: #111111;
+  --text-muted: #6f7276;
+  --accent: #003057;
+  --accent-soft: #edf4fb;
+}
+
+.dark {
+  --bg: #050714;
+  --surface: #08112b;
+  --surface-muted: #0e1a3b;
+  --border: rgba(255, 255, 255, 0.08);
+  --text-body: #f4f5f7;
+  --text-muted: #d4d7e1;
+  --accent: #76b5ff;
+  --accent-soft: #0b2a55;
+}
+
+::selection {
+  background: rgba(0, 48, 87, 0.18);
+  color: var(--primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text-body);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+@keyframes progress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
