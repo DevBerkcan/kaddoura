@@ -27,7 +27,7 @@ const STEPS: {
   {
     num: "03",
     icon: BadgeCheck,
-    title: "Kaufabschluss & Finanzierung",
+    title: "Kaufabschluss",
     desc: "Wir beraten Sie ehrlich und transparent. Inzahlungnahme Ihres Fahrzeugs, flexible Zahlungswege und optionale Gebrauchtwagengarantie inklusive.",
   },
   {
