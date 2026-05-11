@@ -91,7 +91,7 @@ export const SERVICES = [
     icon: "filecheck" as const,
     title: "Zulassungsdienst",
     description:
-      "Zulassung in umliegenden Kreisen — ohne zeitraubende Behördengänge für Sie.",
+      "Fahrzeugzulassung Deutschlandweit innerhalb von 10 Minuten",
   },
   {
     icon: "shield" as const,

@@ -96,7 +96,7 @@ export function Hero() {
         className="relative z-[4] max-w-[1200px] mx-auto px-6 sm:px-10 w-full pt-36 pb-24"
       >
         <motion.div variants={fadeUp}>
-          <Eyebrow>Ihr Experte für Qualitätsfahrzeuge in Wuppertal</Eyebrow>
+          <Eyebrow>Ihr Partner für hochwertige Gebrauchtwagen in Wuppertal</Eyebrow>
         </motion.div>
 
         <motion.h1
