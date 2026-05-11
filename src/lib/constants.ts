@@ -167,11 +167,11 @@ export const REVIEWS = [
 ] as const;
 
 export const FAQS = [
-  {
-    question: "Welche Zahlungsmöglichkeiten bieten Sie an?",
-    answer:
-      "Wir akzeptieren Barzahlung, Überweisung und bieten in Zusammenarbeit mit Partnerbanken auch Finanzierungslösungen an.",
-  },
+{
+  question: "Wie schnell erhalte ich mein Fahrzeug?",
+  answer:
+    "Unsere Fahrzeuge sind sofort verfügbar. Nach erfolgreichem Zahlungseingang können Sie Ihr Fahrzeug in der Regel innerhalb von nur 10 Minuten mitnehmen und direkt vom Hof fahren.",
+},
   {
     question: "Kann ich vor dem Kauf eine Probefahrt machen?",
     answer:

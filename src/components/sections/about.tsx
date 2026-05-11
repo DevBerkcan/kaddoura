@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Shield, Check, Globe } from "lucide-react";
+import { Shield, Check } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { IMAGES } from "@/lib/constants";
@@ -9,7 +9,6 @@ import { IMAGES } from "@/lib/constants";
 const badges = [
   { icon: <Shield size={16} />, label: "Familienunternehmen seit 2000" },
   { icon: <Check size={16} />, label: "Persönlicher Service" },
-  { icon: <Globe size={16} />, label: "DE · EN · العربية" },
 ];
 
 export function About() {
@@ -28,10 +27,10 @@ export function About() {
           </Reveal>
           <Reveal delay={0.14}>
             <p className="font-body text-[15px] leading-relaxed text-[var(--text-body)] mb-4">
-              Wir sind seit mehr als <strong>25 Jahren</strong> Ihr
+              Wir sind seit mehr als 25 Jahren Ihr
               vertrauensvoller Partner, wenn es um hochwertige Jahres- und
               Gebrauchtwagen geht. Unser Familienunternehmen steht für{" "}
-              <strong>Professionalität, Kompetenz und Zuverlässigkeit</strong>.
+              Professionalität, Kompetenz und Zuverlässigkeit.
               Diese Werte leben wir täglich und geben unseren Kunden damit echte
               Sicherheit.
             </p>
@@ -40,7 +39,7 @@ export function About() {
             <p className="font-body text-[15px] leading-relaxed text-[var(--text-body)]">
               Bei uns finden Sie eine sorgfältig ausgewählte Fahrzeugpalette,
               persönlichen Service, ehrliche Beratung und transparente Abläufe.{" "}
-              <strong>Ihre Zufriedenheit steht für uns an erster Stelle.</strong>
+              Ihre Zufriedenheit steht für uns an erster Stelle.
             </p>
           </Reveal>
           <Reveal delay={0.26}>
