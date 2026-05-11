@@ -69,8 +69,8 @@ export function Contact() {
                 className="font-display font-extrabold text-brand-tertiary mb-9"
                 style={{ fontSize: "clamp(30px, 3.8vw, 44px)" }}
               >
-                Besuchen Sie{" "}
-                <span className="text-brand-primary">uns</span>
+                Kontakt, Probefahrt und{" "}
+                <span className="text-brand-primary">Anfahrt</span>
               </h2>
             </Reveal>
 
@@ -101,7 +101,7 @@ export function Contact() {
             <Reveal delay={0.55}>
               <div className="flex gap-2.5 mt-6">
                 <MagneticButton href={`tel:${SITE.phone}`} variant="primary">
-                  <Phone size={14} /> Anrufen
+                  <Phone size={14} /> Autocenter Kaddoura anrufen
                 </MagneticButton>
                 <MagneticButton href={SITE.whatsapp} variant="secondary" target="_blank">
                   <MessageCircle size={14} /> WhatsApp
@@ -191,7 +191,7 @@ export function Contact() {
                     {status === "loading" ? (
                       <><Loader2 size={14} className="animate-spin" /> Wird gesendet…</>
                     ) : (
-                      <>Nachricht senden <ArrowRight size={14} /></>
+                      <>Anfrage an Autocenter Kaddoura senden <ArrowRight size={14} /></>
                     )}
                   </button>
                 </form>

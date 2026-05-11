@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: `Impressum von ${SITE.name}`,
+  description: `Impressum und Anbieterkennzeichnung von ${SITE.name}, Friedrich-Ebert-Straße 150, 42117 Wuppertal.`,
   alternates: { canonical: `${SITE.url}/impressum` },
   robots: { index: false },
 };

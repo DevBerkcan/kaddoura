@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 
 export const metadata: Metadata = {
   title: "Allgemeine Geschäftsbedingungen",
-  description: `AGB von ${SITE.name}`,
+  description: `Allgemeine Geschäftsbedingungen von ${SITE.name} für den Fahrzeugkauf in Wuppertal.`,
   alternates: { canonical: `${SITE.url}/agb` },
   robots: { index: false },
 };
@@ -99,7 +99,7 @@ const AGB_HTML = `
   <p>(*) Unzutreffendes streichen</p>
 
   <h3>§ 10 Datenschutz</h3>
-  <p>Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung, die unter https://www.autocenterkaddoura.de/datenschutz abrufbar ist.</p>
+  <p>Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung, die unter https://www.autocenter-kaddoura.de/datenschutz abrufbar ist.</p>
 
   <h3>§ 11 Schlussbestimmungen</h3>
   <p>(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</p>

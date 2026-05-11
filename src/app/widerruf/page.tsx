@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 
 export const metadata: Metadata = {
   title: "Widerrufsbelehrung",
-  description: `Widerrufsbelehrung von ${SITE.name}`,
+  description: `Widerrufsbelehrung von ${SITE.name} für Verbraucher beim Fahrzeugkauf.`,
   alternates: { canonical: `${SITE.url}/widerruf` },
   robots: { index: false },
 };

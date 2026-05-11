@@ -8,9 +8,9 @@ import { Reveal } from "@/components/motion/reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
 
 const PHOTOS = [
-  { src: "/gallery-IMG_3234.jpg", alt: "Autocenter Kaddoura" },
-  { src: "/gallery-IMG_3232.jpg", alt: "Autocenter Kaddoura" },
-  { src: "/gallery-IMG_3230.jpg", alt: "Autocenter Kaddoura" },
+  { src: "/gallery-IMG_3234.jpg", alt: "Ausstellungsbereich von Autocenter Kaddoura in Wuppertal" },
+  { src: "/gallery-IMG_3232.jpg", alt: "Fahrzeugauswahl im Autohaus Autocenter Kaddoura" },
+  { src: "/gallery-IMG_3230.jpg", alt: "Gebrauchtwagen bei Autocenter Kaddoura in Wuppertal" },
 ];
 
 export function PhotoGallery() {
@@ -48,7 +48,7 @@ export function PhotoGallery() {
       </Reveal>
       <Reveal delay={0.08}>
         <h2
-          className="font-display font-extrabold text-brand-tertiary dark:text-white mb-12"
+          className="font-display font-extrabold text-brand-tertiary mb-12"
           style={{ fontSize: "clamp(30px, 3.8vw, 44px)" }}
         >
           Unser{" "}

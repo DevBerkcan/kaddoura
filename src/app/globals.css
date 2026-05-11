@@ -21,17 +21,6 @@
   --accent-soft: #edf4fb;
 }
 
-.dark {
-  --bg: #050714;
-  --surface: #08112b;
-  --surface-muted: #0e1a3b;
-  --border: rgba(255, 255, 255, 0.08);
-  --text-body: #f4f5f7;
-  --text-muted: #d4d7e1;
-  --accent: #76b5ff;
-  --accent-soft: #0b2a55;
-}
-
 ::selection {
   background: rgba(0, 48, 87, 0.18);
   color: var(--primary);

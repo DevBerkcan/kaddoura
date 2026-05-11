@@ -34,7 +34,7 @@ export function Team() {
                 {member.image ? (
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={`${member.name}, ${member.role} bei Autocenter Kaddoura in Wuppertal`}
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 33vw"

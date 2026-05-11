@@ -44,11 +44,11 @@ function AnimatedStat({
 
   return (
     <div ref={ref}>
-      <div className="font-display text-4xl font-extrabold text-brand-tertiary dark:text-white leading-none">
+      <div className="font-display text-4xl font-extrabold text-brand-tertiary leading-none">
         {value}
-        <span className="text-xl text-brand-primary/80 dark:text-white/50">{suffix}</span>
+        <span className="text-xl text-brand-primary/80 ">{suffix}</span>
       </div>
-      <div className="font-body text-[11px] font-medium text-brand-neutral/70 dark:text-white/50 tracking-wide uppercase mt-1.5">
+      <div className="font-body text-[11px] font-medium text-brand-neutral/70 tracking-wide uppercase mt-1.5">
         {label}
       </div>
     </div>
@@ -57,7 +57,7 @@ function AnimatedStat({
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#f0f4f8] via-[#e8eef4] to-[#f5f7fa] text-[var(--text-body)] dark:bg-gradient-to-br dark:from-brand-primary dark:via-brand-primary-dark dark:to-[#000a18] dark:text-white">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#f0f4f8] via-[#e8eef4] to-[#f5f7fa] text-[var(--text-body)] ">
       <ParticleCanvas />
 
       {/* Volvo XC90 — large, right-aligned */}
@@ -69,24 +69,24 @@ export function Hero() {
       >
         <Image
           src={IMAGES.heroCar}
-          alt="Volvo XC90"
+          alt="Volvo XC90 Gebrauchtwagen bei Autocenter Kaddoura in Wuppertal"
           fill
           priority
           className="object-contain object-right-bottom"
           sizes="65vw"
         />
         {/* Left fade so text stays legible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#e8eef4] via-[#e8eef4]/40 to-transparent dark:from-brand-primary dark:via-brand-primary/50 dark:to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#e8eef4] via-[#e8eef4]/40 to-transparent pointer-events-none" />
         {/* Subtle bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#f0f4f8]/80 dark:from-brand-primary-dark to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#f0f4f8]/80 to-transparent pointer-events-none" />
       </motion.div>
 
       {/* Decorative circles */}
-      <div className="absolute top-[8%] right-[10%] w-[450px] h-[450px] border border-brand-primary/10 rounded-full dark:border-white/[0.03]" />
-      <div className="absolute bottom-[-15%] left-[-8%] w-[600px] h-[600px] border border-brand-primary/10 rounded-full dark:border-white/[0.02]" />
+      <div className="absolute top-[8%] right-[10%] w-[450px] h-[450px] border border-brand-primary/10 rounded-full " />
+      <div className="absolute bottom-[-15%] left-[-8%] w-[600px] h-[600px] border border-brand-primary/10 rounded-full " />
 
       {/* Bottom fade to page bg */}
-      <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-[#f0f4f8] dark:from-[#000a18] to-transparent z-[3]" />
+      <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-[#f0f4f8] to-transparent z-[3]" />
 
       {/* Content */}
       <motion.div
@@ -101,30 +101,31 @@ export function Hero() {
 
         <motion.h1
           variants={fadeUp}
-          className="font-display font-extrabold text-brand-tertiary leading-[1.02] mt-2 max-w-[700px] dark:text-white"
+          className="font-display font-extrabold text-brand-tertiary leading-[1.02] mt-2 max-w-[700px] "
           style={{ fontSize: "clamp(48px, 8vw, 96px)" }}
         >
-          Qualität, die
+          Gebrauchtwagen in
           <br />
-          <span className="text-brand-primary/90 dark:text-white/60">Vertrauen </span>
-          <span className="bg-gradient-to-r from-brand-tertiary to-brand-primary/60 bg-clip-text text-transparent dark:from-white dark:via-white dark:to-[#7eb8e0]">
-            schafft.
+          <span className="text-brand-primary/90 ">Wuppertal </span>
+          <span className="bg-gradient-to-r from-brand-tertiary to-brand-primary/60 bg-clip-text text-transparent ">
+            kaufen.
           </span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
-          className="font-body text-[var(--text-muted)] max-w-[480px] leading-relaxed mt-7 mb-9 dark:text-white/70"
+          className="font-body text-[var(--text-muted)] max-w-[480px] leading-relaxed mt-7 mb-9 "
           style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
         >
-          {SITE.description}
+          {SITE.description} Bei uns finden Sie geprüfte Fahrzeuge, faire
+          Inzahlungnahme, Probefahrt und schnelle Zulassung direkt vor Ort.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex gap-3.5 flex-wrap">
           <MagneticButton href="/fahrzeuge" variant="inverted">
-            Fahrzeuge entdecken <ArrowRight size={15} />
+            Aktuelle Fahrzeuge ansehen <ArrowRight size={15} />
           </MagneticButton>
-          <MagneticButton href="#kontakt" variant="ghost">
+          <MagneticButton href="/#kontakt" variant="ghost">
             Probefahrt / Termin vereinbaren
           </MagneticButton>
         </motion.div>
@@ -137,7 +138,7 @@ export function Hero() {
           ].map((badge) => (
             <div
               key={badge.platform}
-              className="flex items-center gap-2.5 px-4 py-2.5 bg-white/[0.18] rounded-lg border border-[var(--border)] backdrop-blur-sm dark:bg-white/[0.06]"
+              className="flex items-center gap-2.5 px-4 py-2.5 bg-white/[0.18] rounded-lg border border-[var(--border)] backdrop-blur-sm "
             >
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -150,13 +151,13 @@ export function Hero() {
                 ))}
               </div>
               <div>
-                <div className="font-display text-[13px] font-bold text-brand-tertiary dark:text-white">
+                <div className="font-display text-[13px] font-bold text-brand-tertiary ">
                   {badge.rating}{" "}
-                  <span className="font-normal text-brand-neutral/70 dark:text-white/60">
+                  <span className="font-normal text-brand-neutral/70 ">
                     auf {badge.platform}
                   </span>
                 </div>
-                <div className="font-body text-[10px] text-brand-neutral/70 dark:text-white/60">
+                <div className="font-body text-[10px] text-brand-neutral/70 ">
                   {badge.sub}
                 </div>
               </div>
@@ -184,10 +185,10 @@ export function Hero() {
         transition={{ delay: 2.5 }}
         className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[4] flex flex-col items-center gap-1.5 animate-bobble"
       >
-        <span className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-brand-neutral/60 dark:text-white/40">
+        <span className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-brand-neutral/60 ">
           Entdecken
         </span>
-        <ChevronDown size={16} className="text-brand-neutral/50 dark:text-white/30" />
+        <ChevronDown size={16} className="text-brand-neutral/50 " />
       </motion.div>
     </section>
   );

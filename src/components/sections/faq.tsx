@@ -19,7 +19,7 @@ export function FAQ() {
           className="font-display font-extrabold text-brand-tertiary text-center mb-12"
           style={{ fontSize: "clamp(30px, 3.8vw, 44px)" }}
         >
-          FAQ
+          Fragen zum Autokauf in Wuppertal
         </h2>
       </Reveal>
 
@@ -79,8 +79,8 @@ export function FAQ() {
           <p className="font-body text-sm text-brand-neutral mb-4">
             Ihre Frage war nicht dabei?
           </p>
-          <MagneticButton href="#kontakt" variant="secondary">
-            Jetzt Kontakt aufnehmen
+          <MagneticButton href="/#kontakt" variant="secondary">
+            Frage direkt an Autocenter Kaddoura stellen
           </MagneticButton>
         </div>
       </Reveal>

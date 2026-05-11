@@ -28,6 +28,11 @@ export const SITE = {
   whatsapp: "https://wa.me/4915737015935",
   languages: ["Deutsch", "English", "العربية"],
   logo: "/Logo_neu-remove.png",
+  locale: "de_DE",
+  geo: {
+    latitude: 51.2639,
+    longitude: 7.1467,
+  },
 } as const;
 
 export const IMAGES = {
@@ -45,16 +50,26 @@ export const CAR_HIGHLIGHTS = [
   { src: "/1767029764837.jpeg", model: "Volvo XC90" },
 ] as const;
 
+export const SEO_KEYWORDS = [
+  "Gebrauchtwagen Wuppertal",
+  "Jahreswagen Wuppertal",
+  "Auto kaufen Wuppertal",
+  "Volvo Gebrauchtwagen Wuppertal",
+  "Autohandel Wuppertal",
+  "Autohaus Wuppertal",
+  "Gebrauchtwagen Händler NRW",
+] as const;
+
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Über uns", href: "#ueber-uns" },
-  { label: "Services", href: "#services" },
+  { label: "Über uns", href: "/#ueber-uns" },
+  { label: "Services", href: "/#services" },
   { label: "Fahrzeuge", href: "/fahrzeuge" },
-  { label: "Team", href: "#team" },
-  { label: "Bewertungen", href: "#bewertungen" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Team", href: "/#team" },
+  { label: "Bewertungen", href: "/#bewertungen" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Kontakt", href: "/#kontakt" },
 ] as const;
 
 export const STATS = [

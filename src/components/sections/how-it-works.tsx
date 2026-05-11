@@ -40,14 +40,14 @@ const STEPS: {
 
 export function HowItWorks() {
   return (
-    <section className="py-28 bg-brand-secondary/20 dark:bg-white/[0.02]">
+    <section className="py-28 bg-brand-secondary/20 ">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <Reveal>
           <Eyebrow>So einfach geht's</Eyebrow>
         </Reveal>
         <Reveal delay={0.08}>
           <h2
-            className="font-display font-extrabold text-brand-tertiary dark:text-white mb-3"
+            className="font-display font-extrabold text-brand-tertiary mb-3"
             style={{ fontSize: "clamp(30px, 3.8vw, 44px)" }}
           >
             Ihr Weg zum{" "}
@@ -55,9 +55,9 @@ export function HowItWorks() {
           </h2>
         </Reveal>
         <Reveal delay={0.12}>
-          <p className="font-body text-[15px] text-brand-neutral dark:text-white/60 max-w-[500px] leading-relaxed mb-16">
-            Von der ersten Anfrage bis zur Schlüsselübergabe — schnell,
-            persönlich und ohne Umwege.
+          <p className="font-body text-[15px] text-brand-neutral max-w-[500px] leading-relaxed mb-16">
+            Von der ersten Anfrage bis zur Schlüsselübergabe in Wuppertal:
+            schnell, persönlich und ohne Umwege.
           </p>
         </Reveal>
 
@@ -70,13 +70,13 @@ export function HowItWorks() {
             const Icon = step.icon;
             return (
               <Reveal key={step.num} delay={i * 0.1}>
-                <div className="relative z-[1] bg-white dark:bg-white/[0.04] rounded-2xl border border-[var(--border)] p-6 h-full flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="relative z-[1] bg-white rounded-2xl border border-[var(--border)] p-6 h-full flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   {/* Number + icon row */}
                   <div className="flex items-start justify-between mb-5">
-                    <span className="font-display text-[40px] font-extrabold leading-none text-brand-primary/10 dark:text-white/10 select-none">
+                    <span className="font-display text-[40px] font-extrabold leading-none text-brand-primary/10 select-none">
                       {step.num}
                     </span>
-                    <div className="w-11 h-11 rounded-xl bg-brand-primary/[0.07] dark:bg-white/[0.07] flex items-center justify-center text-brand-primary dark:text-white/80 flex-shrink-0">
+                    <div className="w-11 h-11 rounded-xl bg-brand-primary/[0.07] flex items-center justify-center text-brand-primary flex-shrink-0">
                       <Icon size={20} strokeWidth={1.75} />
                     </div>
                   </div>
@@ -84,10 +84,10 @@ export function HowItWorks() {
                   {/* Step indicator dot */}
                   <div className="w-2.5 h-2.5 rounded-full bg-brand-primary mb-3" />
 
-                  <h3 className="font-display text-[17px] font-bold text-brand-tertiary dark:text-white mb-2 leading-snug">
+                  <h3 className="font-display text-[17px] font-bold text-brand-tertiary mb-2 leading-snug">
                     {step.title}
                   </h3>
-                  <p className="font-body text-[13px] text-brand-neutral dark:text-white/55 leading-relaxed flex-1">
+                  <p className="font-body text-[13px] text-brand-neutral leading-relaxed flex-1">
                     {step.desc}
                   </p>
                 </div>
@@ -99,8 +99,8 @@ export function HowItWorks() {
         {/* CTA */}
         <Reveal delay={0.35}>
           <div className="mt-12 flex justify-center">
-            <MagneticButton href="#kontakt" variant="primary">
-              Jetzt Termin vereinbaren
+            <MagneticButton href="/#kontakt" variant="primary">
+              Probefahrt in Wuppertal vereinbaren
             </MagneticButton>
           </div>
         </Reveal>

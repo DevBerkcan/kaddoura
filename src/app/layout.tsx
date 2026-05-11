@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { manrope, inter } from "@/lib/fonts";
-import { SITE } from "@/lib/constants";
+import { SEO_KEYWORDS, SITE } from "@/lib/constants";
+import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/seo-schema";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/motion/scroll-progress";
@@ -9,24 +10,45 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} | ${SITE.tagline}`,
+    default: `${SITE.name} - Gebrauchtwagen & Jahreswagen in Wuppertal`,
     template: `%s | ${SITE.name}`,
   },
-  description: SITE.description,
+  description: "🏆 Autocenter Kaddoura - Ihr vertrauensvoller Autohandel in Wuppertal. Hochwertige Gebrauchtwagen & Jahreswagen seit 25 Jahren. ✓ Faire Preise ✓ Persönlicher Service ✓ Schnelle Zulassung.",
+  keywords: [...SEO_KEYWORDS],
+  applicationName: SITE.name,
+  category: "Automotive",
+  creator: SITE.name,
+  publisher: SITE.name,
+  referrer: "origin-when-cross-origin",
   openGraph: {
     type: "website",
-    locale: "de_DE",
+    locale: SITE.locale,
     siteName: SITE.name,
-    title: `${SITE.name} | ${SITE.tagline}`,
-    description: SITE.description,
+    url: SITE.url,
+    title: `${SITE.name} - Gebrauchtwagen & Jahreswagen in Wuppertal`,
+    description: "Hochwertige Gebrauchtwagen & Jahreswagen in Wuppertal. Seit 25 Jahren Ihr vertrauensvoller Partner mit fairem Service.",
     images: [
-      { url: "/og-image.png", width: 1200, height: 630, alt: SITE.name },
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: SITE.name,
+        type: "image/png",
+      },
     ],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    site: "@autocenterkaddoura",
+    creator: "@autocenterkaddoura",
+    title: `${SITE.name} - Gebrauchtwagen in Wuppertal`,
+    description: "Hochwertige Gebrauchtwagen & Jahreswagen. Faire Preise, persönlicher Service, schnelle Zulassung.",
+    images: ["/og-image.png"],
+  },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -35,61 +57,13 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: { canonical: SITE.url },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "AutoDealer",
-  name: SITE.name,
-  url: SITE.url,
-  telephone: SITE.phone,
-  email: SITE.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: SITE.address.street,
-    addressLocality: SITE.address.city,
-    postalCode: SITE.address.zip,
-    addressCountry: "DE",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 51.2639,
-    longitude: 7.1467,
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "10:00",
-      closes: "13:00",
-    },
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.5",
-    reviewCount: "320",
+  alternates: {
+    canonical: SITE.url,
   },
 };
 
-const themeScript = `
-(function() {
-  try {
-    const theme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const useDark = theme === 'dark' || (!theme && prefersDark);
-    document.documentElement.classList.toggle('dark', useDark);
-  } catch (error) {
-    console.error(error);
-  }
-})();
-`;
+const organizationSchema = generateOrganizationSchema();
+const websiteSchema = generateWebsiteSchema();
 
 export default function RootLayout({
   children,
@@ -99,16 +73,20 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${manrope.variable} ${inter.variable}`}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <meta name="theme-color" content="#003057" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body className="font-body antialiased">
         <ScrollProgress />
         <Navbar />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
-  description: `Datenschutzerklärung von ${SITE.name}`,
+  description: `Datenschutzerklärung von ${SITE.name} zur Verarbeitung personenbezogener Daten auf dieser Website.`,
   alternates: { canonical: `${SITE.url}/datenschutz` },
   robots: { index: false },
 };

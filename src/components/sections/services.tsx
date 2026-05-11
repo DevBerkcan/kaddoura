@@ -4,6 +4,7 @@ import { Car, Eye, Globe, Wrench, FileCheck, Shield } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { TiltCard } from "@/components/motion/tilt-card";
 import { Eyebrow } from "@/components/ui/eyebrow";
+import { MagneticButton } from "@/components/motion/magnetic-button";
 import { SERVICES } from "@/lib/constants";
 import type { ReactNode } from "react";
 
@@ -31,8 +32,8 @@ export function Services() {
         </Reveal>
         <Reveal delay={0.12}>
           <p className="font-body text-[15px] text-brand-neutral text-center max-w-[550px] mx-auto mb-12 leading-relaxed">
-            Umfassender Service rund um Ihr Fahrzeug. Wir sind für Sie da – vor,
-            während und nach dem Kauf.
+            Umfassender Service rund um Ihren Autokauf in Wuppertal. Wir sind
+            für Sie da - vor, während und nach dem Kauf.
           </p>
         </Reveal>
 
@@ -53,6 +54,13 @@ export function Services() {
             </Reveal>
           ))}
         </div>
+        <Reveal delay={0.38}>
+          <div className="mt-10 flex justify-center">
+            <MagneticButton href="/#kontakt" variant="primary">
+              Service zum Fahrzeugkauf anfragen
+            </MagneticButton>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import { Shield, Check } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { IMAGES } from "@/lib/constants";
+import { MagneticButton } from "@/components/motion/magnetic-button";
 
 const badges = [
   { icon: <Shield size={16} />, label: "Familienunternehmen seit 2000" },
@@ -22,7 +23,8 @@ export function About() {
               className="font-display font-extrabold text-brand-tertiary leading-tight mb-6"
               style={{ fontSize: "clamp(30px, 3.8vw, 44px)" }}
             >
-              Herzlich <span className="text-brand-primary">Willkommen!</span>
+              Ihr Autohaus für{" "}
+              <span className="text-brand-primary">Qualitätsfahrzeuge in Wuppertal</span>
             </h2>
           </Reveal>
           <Reveal delay={0.14}>
@@ -38,8 +40,9 @@ export function About() {
           <Reveal delay={0.2}>
             <p className="font-body text-[15px] leading-relaxed text-[var(--text-body)]">
               Bei uns finden Sie eine sorgfältig ausgewählte Fahrzeugpalette,
-              persönlichen Service, ehrliche Beratung und transparente Abläufe.{" "}
-              Ihre Zufriedenheit steht für uns an erster Stelle.
+              persönlichen Service, ehrliche Beratung und transparente Abläufe.
+              Ihre Zufriedenheit steht für uns an erster Stelle - vom ersten
+              Kontakt bis zur Fahrzeugübergabe.
             </p>
           </Reveal>
           <Reveal delay={0.26}>
@@ -57,6 +60,13 @@ export function About() {
               ))}
             </div>
           </Reveal>
+          <Reveal delay={0.32}>
+            <div className="mt-8">
+              <MagneticButton href="/fahrzeuge" variant="secondary">
+                Gebrauchtwagenbestand ansehen
+              </MagneticButton>
+            </div>
+          </Reveal>
         </div>
 
         <Reveal delay={0.1} direction="left">
@@ -64,7 +74,7 @@ export function About() {
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden relative border border-[var(--border)] shadow-xl">
               <Image
                 src={IMAGES.dealership}
-                alt="Autocenter Kaddoura Wuppertal"
+                alt="Autohaus Autocenter Kaddoura an der Friedrich-Ebert-Straße in Wuppertal"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 40vw"

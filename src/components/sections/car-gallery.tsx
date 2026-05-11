@@ -104,9 +104,8 @@ export function CarGallery() {
                     {car.image ? (
                       <Image
                         src={car.image}
-                        alt={car.name}
+                        alt={`${car.name} Gebrauchtwagen bei Autocenter Kaddoura in Wuppertal`}
                         fill
-                        priority={i < 3}
                         className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />

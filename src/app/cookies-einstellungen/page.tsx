@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 
 export const metadata: Metadata = {
   title: "Cookie-Einstellungen",
-  description: `Cookie-Einstellungen von ${SITE.name}`,
+  description: `Cookie-Einstellungen und Hinweise zur Cookie-Nutzung auf der Website von ${SITE.name}.`,
   alternates: { canonical: `${SITE.url}/cookies-einstellungen` },
   robots: { index: false },
 };
