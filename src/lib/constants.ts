@@ -16,7 +16,7 @@ export const SITE = {
   },
   hours: {
     weekdays: "09:00 – 18:00 Uhr",
-    saturday: "10:00 – 13:00 Uhr",
+    saturday: "09:00 – 13:00 Uhr",
     sunday: "Geschlossen",
   },
   mobileDeUrl: "https://home.mobile.de/KADDOURA#ses",
@@ -47,6 +47,7 @@ export const CAR_HIGHLIGHTS = [
 
 
 export const NAV_LINKS = [
+  { label: "Home", href: "/" },
   { label: "Über uns", href: "#ueber-uns" },
   { label: "Services", href: "#services" },
   { label: "Fahrzeuge", href: "/fahrzeuge" },
@@ -192,11 +193,11 @@ export const FAQS = [
     answer:
       "Ja, wir bewerten Ihr Fahrzeug transparent und bieten Ihnen eine faire Inzahlungnahme an.",
   },
-  {
-    question: "Verkaufen Sie auch Fahrzeuge ins Ausland?",
-    answer:
-      "Ja, wir bieten Netto-Auslandsverkauf mit kompletter Abwicklung inklusive Ausfuhrdokumenten an.",
-  },
+ {
+  question: "Verkaufen Sie Fahrzeuge auch ins EU-Ausland oder in Drittländer?",
+  answer:
+    "Ja, wir verkaufen Fahrzeuge sowohl innerhalb der EU als auch in Drittländer. Exportverkäufe können unter bestimmten Voraussetzungen netto erfolgen.",
+},
   {
     question: "In welchen Sprachen kann ich beraten werden?",
     answer:

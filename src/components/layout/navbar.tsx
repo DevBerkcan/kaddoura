@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, Menu, X, Sun, Moon } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 
@@ -66,20 +66,6 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-
-          <button
-            type="button"
-            onClick={toggleTheme}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-brand-primary/20 bg-brand-primary/5 text-brand-primary shadow-sm transition-all duration-300 hover:bg-brand-primary/10 hover:border-brand-primary/40 dark:border-white/15 dark:bg-white/[0.08] dark:text-white dark:hover:bg-white/15 dark:hover:border-white/30 group relative"
-            aria-label="Theme umschalten"
-            title={theme === "dark" ? "Zu Lightmode wechseln" : "Zu Darkmode wechseln"}
-          >
-            {theme === "dark" ? (
-              <Sun size={18} className="transition-transform duration-300 group-hover:rotate-12" />
-            ) : (
-              <Moon size={18} className="transition-transform duration-300 group-hover:-rotate-12" />
-            )}
-          </button>
 
           <a
             href={`tel:${SITE.phone}`}
