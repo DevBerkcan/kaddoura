@@ -9,8 +9,8 @@ interface EyebrowProps {
 export function Eyebrow({ children, center, light }: EyebrowProps) {
   const lineColor = light ? "bg-white/30" : "bg-brand-primary";
   const textColor = light
-    ? "text-white/50 dark:text-white/50"
-    : "text-brand-primary dark:text-white/50";
+    ? "text-white/50 "
+    : "text-brand-primary ";
 
   return (
     <div

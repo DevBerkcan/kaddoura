@@ -20,9 +20,9 @@ const legalLinks = [
 
 export function Footer() {
   return (
-    <footer className="pt-12 pb-5 px-6 sm:px-10 bg-white dark:bg-brand-primary">
+    <footer className="pt-12 pb-5 px-6 sm:px-10 bg-white ">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-8 border-b border-[var(--border)] dark:border-white/[0.08]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-8 border-b border-[var(--border)] ">
           {/* Brand */}
           <div>
             <Link href="/" aria-label={SITE.name}>
@@ -31,10 +31,10 @@ export function Footer() {
                 alt={SITE.name}
                 width={120}
                 height={32}
-                className="h-8 w-auto mb-3.5 dark:invert"
+                className="h-8 w-auto mb-3.5 "
               />
             </Link>
-            <p className="font-body text-[13px] text-brand-neutral leading-relaxed dark:text-white/50">
+            <p className="font-body text-[13px] text-brand-neutral leading-relaxed ">
               Ihr zuverlässiger Partner für Qualitätsfahrzeuge in Wuppertal.
               Kompetente Beratung und erstklassiger Service.
             </p>
@@ -42,14 +42,14 @@ export function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="font-display text-xs font-bold text-brand-neutral/70 tracking-wider uppercase mb-4 dark:text-white/50">
+            <h4 className="font-display text-xs font-bold text-brand-neutral/70 tracking-wider uppercase mb-4 ">
               Schnellzugriff
             </h4>
             {quickLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="block font-body text-[13px] text-brand-neutral/70 hover:text-brand-primary transition-colors mb-2 dark:text-white/70 dark:hover:text-white"
+                className="block font-body text-[13px] text-brand-neutral/70 hover:text-brand-primary transition-colors mb-2 "
               >
                 {link.label}
               </Link>
@@ -58,23 +58,23 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-xs font-bold text-brand-neutral/70 tracking-wider uppercase mb-4 dark:text-white/50">
+            <h4 className="font-display text-xs font-bold text-brand-neutral/70 tracking-wider uppercase mb-4 ">
               Kontakt
             </h4>
-            <p className="font-body text-[13px] text-brand-neutral/70 leading-relaxed dark:text-white/70">
+            <p className="font-body text-[13px] text-brand-neutral/70 leading-relaxed ">
               {SITE.address.street}
               <br />
               {SITE.address.zip} {SITE.address.city}
             </p>
             <a
               href={`tel:${SITE.phone}`}
-              className="block font-body text-[13px] text-brand-neutral/70 mt-2 hover:text-brand-primary transition-colors dark:text-white/70 dark:hover:text-white"
+              className="block font-body text-[13px] text-brand-neutral/70 mt-2 hover:text-brand-primary transition-colors "
             >
               {SITE.phone}
             </a>
             <a
               href={`mailto:${SITE.email}`}
-              className="block font-body text-[13px] text-brand-neutral/70 mt-1 hover:text-brand-primary transition-colors dark:text-white/70 dark:hover:text-white"
+              className="block font-body text-[13px] text-brand-neutral/70 mt-1 hover:text-brand-primary transition-colors "
             >
               {SITE.email}
             </a>
@@ -82,10 +82,10 @@ export function Footer() {
 
           {/* Hours */}
           <div>
-            <h4 className="font-display text-xs font-bold text-brand-neutral/70 tracking-wider uppercase mb-4 dark:text-white/50">
+            <h4 className="font-display text-xs font-bold text-brand-neutral/70 tracking-wider uppercase mb-4 ">
               Öffnungszeiten
             </h4>
-            <p className="font-body text-[13px] text-brand-neutral/70 leading-loose dark:text-white/70">
+            <p className="font-body text-[13px] text-brand-neutral/70 leading-loose ">
               Mo–Fr: {SITE.hours.weekdays}
               <br />
               Sa: {SITE.hours.saturday}
@@ -97,7 +97,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="flex justify-between items-center pt-5 flex-wrap gap-3">
-          <span className="font-body text-xs text-brand-neutral/70 dark:text-white/40">
+          <span className="font-body text-xs text-brand-neutral/70 ">
             © {new Date().getFullYear()} {SITE.name}. Alle Rechte vorbehalten.
           </span>
           <div className="flex gap-5 flex-wrap">
@@ -105,7 +105,7 @@ export function Footer() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-body text-[11px] text-brand-neutral/70 hover:text-brand-primary transition-colors dark:text-white/70 dark:hover:text-white"
+                className="font-body text-[11px] text-brand-neutral/70 hover:text-brand-primary transition-colors "
               >
                 {link.label}
               </Link>

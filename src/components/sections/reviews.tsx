@@ -8,12 +8,12 @@ import { REVIEWS, SITE } from "@/lib/constants";
 
 export function Reviews() {
   return (
-    <section id="bewertungen" className="py-28 bg-white dark:bg-brand-primary overflow-hidden">
+    <section id="bewertungen" className="py-28 bg-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <Reveal><Eyebrow center>Kundenstimmen</Eyebrow></Reveal>
         <Reveal delay={0.08}>
           <h2
-            className="font-display font-extrabold text-brand-tertiary text-center mb-2 dark:text-white"
+            className="font-display font-extrabold text-brand-tertiary text-center mb-2 "
             style={{ fontSize: "clamp(30px, 3.8vw, 44px)" }}
           >
             Was unsere Kunden sagen
@@ -29,7 +29,7 @@ export function Reviews() {
                 color="#FFD166"
               />
             ))}
-            <span className="font-body text-sm text-brand-neutral/70 ml-2.5 dark:text-white/60">
+            <span className="font-body text-sm text-brand-neutral/70 ml-2.5 ">
               4.5/5 auf Google (320+ Bewertungen)
             </span>
           </div>
@@ -47,25 +47,25 @@ export function Reviews() {
             delay={i * 0.06}
             className="min-w-[340px] max-w-[400px] flex-shrink-0 snap-start"
           >
-            <div className="p-7 bg-[var(--surface)] rounded-2xl border border-[var(--border)] backdrop-blur-sm h-full flex flex-col dark:bg-white/[0.06] dark:border-white/[0.08]">
+            <div className="p-7 bg-[var(--surface)] rounded-2xl border border-[var(--border)] backdrop-blur-sm h-full flex flex-col ">
               <div className="flex gap-0.5 mb-3.5">
                 {[1, 2, 3, 4, 5].map((j) => (
                   <Star key={j} size={13} fill="#FFD166" color="#FFD166" />
                 ))}
               </div>
-              <p className="font-body text-sm text-brand-neutral/80 leading-relaxed flex-1 mb-4 dark:text-white/80">
+              <p className="font-body text-sm text-brand-neutral/80 leading-relaxed flex-1 mb-4 ">
                 „{review.text}"
               </p>
-              <div className="flex justify-between items-center border-t border-[var(--border)] pt-3.5 dark:border-white/[0.06]">
+              <div className="flex justify-between items-center border-t border-[var(--border)] pt-3.5 ">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full bg-brand-primary/[0.08] flex items-center justify-center font-display text-xs font-bold text-brand-primary dark:bg-white/10 dark:text-white/70">
+                  <div className="w-8 h-8 rounded-full bg-brand-primary/[0.08] flex items-center justify-center font-display text-xs font-bold text-brand-primary ">
                     {review.name.charAt(0)}
                   </div>
-                  <span className="font-display text-sm font-bold text-brand-tertiary dark:text-white">
+                  <span className="font-display text-sm font-bold text-brand-tertiary ">
                     {review.name}
                   </span>
                 </div>
-                <span className="font-body text-[11px] text-brand-neutral/70 dark:text-white/60">
+                <span className="font-body text-[11px] text-brand-neutral/70 ">
                   {review.time}
                 </span>
               </div>

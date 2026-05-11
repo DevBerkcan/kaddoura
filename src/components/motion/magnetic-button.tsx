@@ -21,11 +21,11 @@ const variants = {
   primary:
     "bg-brand-primary text-white hover:bg-brand-primary-light border-transparent",
   secondary:
-    "bg-transparent text-brand-primary border-2 border-brand-primary hover:bg-brand-primary hover:text-white dark:text-white dark:border-white/20 dark:hover:bg-white/10",
+    "bg-transparent text-brand-primary border-2 border-brand-primary hover:bg-brand-primary hover:text-white ",
   inverted:
-    "bg-white text-brand-tertiary hover:bg-brand-tertiary hover:text-white border-transparent dark:bg-white/10 dark:text-white dark:hover:bg-white/15",
+    "bg-white text-brand-tertiary hover:bg-brand-tertiary hover:text-white border-transparent ",
   ghost:
-    "bg-transparent text-brand-primary border border-brand-primary hover:bg-brand-primary/10 dark:text-white/90 dark:border-white/20 dark:hover:bg-white/10",
+    "bg-transparent text-brand-primary border border-brand-primary hover:bg-brand-primary/10 ",
 };
 
 const MotionLink = motion(Link);
