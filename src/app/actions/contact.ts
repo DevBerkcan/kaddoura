@@ -38,30 +38,45 @@ export async function sendContactEmail(
     tls: { ciphers: "SSLv3" },
   });
 
-  await transporter.sendMail({
-    from: `"Autocenter Kaddoura Website" <${smtpUser}>`,
-    to: mailTo,
-    replyTo: email,
-    subject: `Neue Kontaktanfrage von ${name}`,
-    text: [
-      `Name: ${name}`,
-      `E-Mail: ${email}`,
-      phone ? `Telefon: ${phone}` : null,
-      "",
-      `Nachricht:`,
-      message,
-    ]
-      .filter((l) => l !== null)
-      .join("\n"),
-    html: `
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>E-Mail:</strong> <a href="mailto:${email}">${email}</a></p>
-      ${phone ? `<p><strong>Telefon:</strong> ${phone}</p>` : ""}
-      <hr/>
-      <p><strong>Nachricht:</strong></p>
-      <p style="white-space:pre-wrap">${message}</p>
-    `,
-  });
+  try {
+    await transporter.sendMail({
+      from: `"Autocenter Kaddoura Website" <${smtpUser}>`,
+      to: mailTo,
+      replyTo: email,
+      subject: `Neue Kontaktanfrage von ${name}`,
+      text: [
+        `Name: ${name}`,
+        `E-Mail: ${email}`,
+        phone ? `Telefon: ${phone}` : null,
+        "",
+        `Nachricht:`,
+        message,
+      ]
+        .filter((l) => l !== null)
+        .join("\n"),
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:${email}">${email}</a></p>
+        ${phone ? `<p><strong>Telefon:</strong> ${phone}</p>` : ""}
+        <hr/>
+        <p><strong>Nachricht:</strong></p>
+        <p style="white-space:pre-wrap">${message}</p>
+      `,
+    });
 
-  return { ok: true };
+    return { ok: true };
+  } catch (error: unknown) {
+    console.error("sendContactEmail error:", error);
+
+    const message =
+      error instanceof Error
+        ? error.message
+        : "Unbekannter Fehler beim E-Mail-Versand.";
+
+    return {
+      ok: false,
+      error: `E-Mail-Versand fehlgeschlagen: ${message}`,
+    };
+  }
 }
+
