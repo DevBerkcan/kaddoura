@@ -28,7 +28,7 @@ const variants = {
     "bg-transparent text-brand-primary border border-brand-primary hover:bg-brand-primary/10 ",
 };
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export function MagneticButton({
   children,

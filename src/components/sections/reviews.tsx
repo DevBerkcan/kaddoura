@@ -54,7 +54,7 @@ export function Reviews() {
                 ))}
               </div>
               <p className="font-body text-sm text-brand-neutral/80 leading-relaxed flex-1 mb-4 ">
-                „{review.text}"
+                &bdquo;{review.text}&ldquo;
               </p>
               <div className="flex justify-between items-center border-t border-[var(--border)] pt-3.5 ">
                 <div className="flex items-center gap-2.5">

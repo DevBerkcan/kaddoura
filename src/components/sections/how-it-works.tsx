@@ -43,7 +43,7 @@ export function HowItWorks() {
     <section className="py-28 bg-brand-secondary/20 ">
       <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
         <Reveal>
-          <Eyebrow>So einfach geht's</Eyebrow>
+          <Eyebrow>So einfach geht&apos;s</Eyebrow>
         </Reveal>
         <Reveal delay={0.08}>
           <h2

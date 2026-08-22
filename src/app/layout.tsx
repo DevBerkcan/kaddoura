@@ -71,7 +71,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className={`${manrope.variable} ${inter.variable}`}>
+    <html
+      lang="de"
+      className={`${manrope.variable} ${inter.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <meta name="theme-color" content="#003057" />
         <link rel="icon" href="/favicon.ico" />
@@ -83,7 +87,7 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased" suppressHydrationWarning>
         <ScrollProgress />
         <Navbar />
         {children}
