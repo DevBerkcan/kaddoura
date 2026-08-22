@@ -104,11 +104,11 @@ export function Hero() {
           className="font-display font-extrabold text-brand-tertiary leading-[1.02] mt-2 max-w-[700px] "
           style={{ fontSize: "clamp(48px, 8vw, 96px)" }}
         >
-          Gebrauchtwagen in
+          Hochwertige Jahres-
           <br />
-          <span className="text-brand-primary/90 ">Wuppertal </span>
+          und{" "}
           <span className="bg-gradient-to-r from-brand-tertiary to-brand-primary/60 bg-clip-text text-transparent ">
-            kaufen.
+            Gebrauchtwagen
           </span>
         </motion.h1>
 

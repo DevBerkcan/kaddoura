@@ -55,6 +55,26 @@ export function Team() {
                 <p className="font-body text-[13px] text-[var(--text-body)] leading-relaxed">
                   {member.description}
                 </p>
+                {(member.phone || member.email) && (
+                  <div className="mt-4 pt-4 border-t border-[var(--border)] flex flex-col gap-1">
+                    {member.phone && (
+                      <a
+                        href={`tel:${member.phone}`}
+                        className="font-body text-[13px] text-brand-neutral/80 hover:text-brand-primary transition-colors"
+                      >
+                        {member.phone}
+                      </a>
+                    )}
+                    {member.email && (
+                      <a
+                        href={`mailto:${member.email}`}
+                        className="font-body text-[13px] text-brand-neutral/80 hover:text-brand-primary transition-colors"
+                      >
+                        {member.email}
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </TiltCard>
           </Reveal>

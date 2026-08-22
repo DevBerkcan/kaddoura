@@ -7,7 +7,9 @@ export const SITE = {
   phone: "+49 157 37015935",
   phone2: "+49 172 2812576",
   phoneLandline: "+49 (0)202 2443611",
+  fax: "+49 202 2443613",
   email: "info@autocenter-kaddoura.de",
+  salesEmail: "rami@autocenter-kaddoura.de",
   address: {
     street: "Friedrich-Ebert-Straße 150",
     city: "Wuppertal",
@@ -20,6 +22,7 @@ export const SITE = {
     sunday: "Geschlossen",
   },
   mobileDeUrl: "https://home.mobile.de/KADDOURA#ses",
+  kleinanzeigenUrl: "https://www.kleinanzeigen.de/pro/Autocenter-Kaddoura",
   googleMapsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=51.2639,7.1467",
   googleReviewsUrl:
@@ -120,27 +123,33 @@ export const SERVICES = [
 export const TEAM = [
   {
     name: "Rami Kaddoura",
-    role: "Geschäftsführer",
+    role: "Geschäftsführer & Hauptansprechpartner",
     description:
-      "Geschäftsführer und Ihr Hauptansprechpartner für alle Fragen rund um hochwertige Fahrzeuge und unseren Service.",
+      "Jung, engagiert und mit langjähriger Erfahrung im Autohandel verbinde ich moderne Beratung mit persönlichem Service. Als Geschäftsführer bin ich Ihr direkter Ansprechpartner für hochwertige Jahres- und Gebrauchtwagen und begleite Sie zuverlässig bei allen Fragen rund um den Fahrzeugkauf.",
     initials: "RK",
     image: IMAGES.rami,
+    phone: "+49 157 37015935",
+    email: "rami@autocenter-kaddoura.de",
   },
   {
     name: "Ahmad Kaddoura",
-    role: "Geschäftsführer",
+    role: "Seniorchef & Gründer",
     description:
-      "Geschäftsführer mit langjähriger Expertise im Automobilhandel und persönlicher Kundenbetreuung.",
+      "Mit meiner langjährigen Erfahrung im Automobilhandel habe ich das Autocenter Kaddoura gegründet und erfolgreich aufgebaut. Auch heute begleite ich unser Familienunternehmen mit meiner Erfahrung und stehe für Qualität und Kundenzufriedenheit.",
     initials: "AK",
     image: IMAGES.ahmad,
+    phone: null,
+    email: null,
   },
   {
     name: "Jennifer Scholl",
     role: "Verwaltung",
     description:
-      "Verwaltungsfachkraft, zuständig für Büroorganisation und Kundenanfragen.",
+      "Als Ansprechpartnerin für die Verwaltung kümmere ich mich um die Büroorganisation sowie die Bearbeitung von Kundenanfragen. Mit Sorgfalt und Zuverlässigkeit sorge ich dafür, dass im Hintergrund alles reibungslos funktioniert.",
     initials: "JS",
     image: null,
+    phone: "+49 202 2443611",
+    email: "info@autocenter-kaddoura.de",
   },
 ] as const;
 

@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: `Impressum und Anbieterkennzeichnung von ${SITE.name}, Friedrich-Ebert-Straße 150, 42117 Wuppertal.`,
+  description: `Impressum und Anbieterkennzeichnung der ${SITE.name} GmbH, Friedrich-Ebert-Str. 150, 42117 Wuppertal.`,
   alternates: { canonical: `${SITE.url}/impressum` },
   robots: { index: false },
 };
@@ -12,32 +12,37 @@ export const metadata: Metadata = {
 // ↓ Legal Cockpit: HTML-Code hier einfügen
 const IMPRESSUM_HTML = `
   <p><strong>Angaben gemäß § 5 TMG</strong><br/>
-  Autocenter Kaddoura<br/>
-  Friedrich-Ebert-Straße 150<br/>
+  Autocenter Kaddoura GmbH<br/>
+  Friedrich-Ebert-Str. 150<br/>
   42117 Wuppertal<br/>
   Deutschland</p>
 
   <p><strong>Kontakt</strong><br/>
   Mobil: +49 157 37015935<br/>
-  Tel.: +49 (0)202 2443611<br/>
-  Mail Sales: <a href="mailto:rami@autocenter-kaddoura.de">rami@autocenter-kaddoura.de</a><br/>
-  Mail Verwaltung: <a href="mailto:info@autocenter-kaddoura.de">info@autocenter-kaddoura.de</a></p>
+  Telefon: +49 202 2443611<br/>
+  Fax: +49 202 2443613<br/>
+  Mail Verkauf: <a href="mailto:rami@autocenter-kaddoura.de">rami@autocenter-kaddoura.de</a><br/>
+  Mail Verwaltung: <a href="mailto:info@autocenter-kaddoura.de">info@autocenter-kaddoura.de</a><br/>
+  Web: <a href="https://www.autocenter-kaddoura.de" target="_blank" rel="noopener noreferrer">www.autocenter-kaddoura.de</a></p>
 
   <p><strong>Rechtsform</strong><br/>
-  Einzelunternehmen</p>
+  Gesellschaft mit beschränkter Haftung (GmbH)</p>
 
-  <p><strong>Geschäftsführer / Alleininhaber</strong><br/>
+  <p><strong>Vertretungsberechtigte Geschäftsführung</strong><br/>
   Rami Kaddoura</p>
 
+  <p>Die Autocenter Kaddoura GmbH wird vertreten durch den Geschäftsführer Rami Kaddoura.</p>
+
   <p><strong>Handelsregister</strong><br/>
-  Keine Eintragung</p>
+  Amtsgericht Wuppertal<br/>
+  Handelsregisternummer: HRB 36861</p>
 
   <p><strong>Umsatzsteuer-Identifikationsnummer</strong><br/>
   USt-IdNr. gemäß § 27a Umsatzsteuergesetz:<br/>
-  DE453978437</p>
+  DE463320411</p>
 
   <p><strong>Steuernummer</strong><br/>
-  5132/5149/3299</p>
+  132/5912/1491</p>
 
   <p><strong>Berufsbezeichnung und berufsrechtliche Regelungen</strong><br/>
   Berufsbezeichnung: Kraftfahrzeughändler<br/>
