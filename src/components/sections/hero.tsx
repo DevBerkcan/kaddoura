@@ -95,10 +95,6 @@ export function Hero() {
         animate="visible"
         className="relative z-[4] max-w-[1200px] mx-auto px-6 sm:px-10 w-full pt-36 pb-24"
       >
-        <motion.div variants={fadeUp}>
-          <Eyebrow>Ihr Partner für hochwertige Gebrauchtwagen</Eyebrow>
-        </motion.div>
-
         <motion.h1
           variants={fadeUp}
           className="font-display font-extrabold text-brand-tertiary leading-[1.04] mt-3 max-w-[900px]"
