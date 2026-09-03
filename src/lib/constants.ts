@@ -1,5 +1,6 @@
 export const SITE = {
   name: "Autocenter Kaddoura",
+  legalName: "Autocenter Kaddoura GmbH",
   tagline: "Qualitätsfahrzeuge in Wuppertal",
   description:
     "Seit über 25 Jahren Ihr vertrauensvoller Partner für hochwertige Jahres- und Gebrauchtwagen. Familienunternehmen mit Herz, Kompetenz und persönlichem Service.",
@@ -32,6 +33,9 @@ export const SITE = {
   languages: ["Deutsch", "English", "العربية"],
   logo: "/Logo_neu-remove.png",
   locale: "de_DE",
+  language: "de-DE",
+  foundingYear: 2000,
+  contentLastModified: "2026-09-03",
   geo: {
     latitude: 51.2639,
     longitude: 7.1467,
@@ -39,7 +43,7 @@ export const SITE = {
 } as const;
 
 export const IMAGES = {
-  heroCar: "/1767029764837.jpeg",
+  heroCar: "/1767029764837-hero-no-logo.png",
   dealership: "/ueber-uns.jpg",
   rami: "/chef.png",
   ahmad: "/chefbaba.png",
@@ -66,10 +70,10 @@ export const SEO_KEYWORDS = [
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Über uns", href: "/#ueber-uns" },
-  { label: "Services", href: "/#services" },
+  { label: "Über uns", href: "/ueber-uns" },
+  { label: "Services", href: "/leistungen" },
   { label: "Fahrzeuge", href: "/fahrzeuge" },
-  { label: "Team", href: "/#team" },
+  { label: "Ratgeber", href: "/wissen" },
   { label: "Bewertungen", href: "/#bewertungen" },
   { label: "FAQ", href: "/#faq" },
   { label: "Kontakt", href: "/#kontakt" },
@@ -83,36 +87,42 @@ export const STATS = [
 
 export const SERVICES = [
   {
+    slug: "inzahlungnahme",
     icon: "car" as const,
     title: "Faire Inzahlungnahme",
     description:
       "Wir bewerten Ihr Auto transparent und bieten Ihnen einen fairen Preis. Gerne nehmen wir Ihr aktuelles Fahrzeug in Zahlung.",
   },
   {
+    slug: "online-besichtigung",
     icon: "eye" as const,
     title: "Online-Besichtigung",
     description:
       "Sehen Sie Ihr Wunschfahrzeug bequem von zu Hause aus live per WhatsApp-Video in Echtzeit.",
   },
   {
+    slug: "internationaler-verkauf",
     icon: "globe" as const,
     title: "Internationaler Verkauf",
     description:
       "Netto-Abrechnung, Ausfuhrdokumente und alle Formalitäten für Nicht-EU-Länder.",
   },
   {
+    slug: "rundum-service",
     icon: "wrench" as const,
     title: "Rundum-Service",
     description:
       "TÜV, Inspektion, DEKRA-Gebrauchtwagencheck, Zulassung und optionale Garantie.",
   },
   {
+    slug: "zulassungsdienst",
     icon: "filecheck" as const,
     title: "Zulassungsdienst",
     description:
       "Fahrzeugzulassung Deutschlandweit innerhalb von 10 Minuten",
   },
   {
+    slug: "gebrauchtwagengarantie",
     icon: "shield" as const,
     title: "Gebrauchtwagengarantie",
     description:
@@ -192,6 +202,21 @@ export const REVIEWS = [
 ] as const;
 
 export const FAQS = [
+  {
+    question: "Was ist das Autocenter Kaddoura?",
+    answer:
+      "Das Autocenter Kaddoura ist ein familiengeführter Gebrauchtwagenhändler in Wuppertal. Seit 2000 bietet das Autohaus geprüfte Jahres- und Gebrauchtwagen sowie persönliche Beratung rund um den Fahrzeugkauf an.",
+  },
+  {
+    question: "Wo befindet sich das Autocenter Kaddoura?",
+    answer:
+      "Sie finden das Autocenter Kaddoura in der Friedrich-Ebert-Straße 150, 42117 Wuppertal. Geöffnet ist montags bis freitags von 09:00 bis 18:00 Uhr und samstags von 09:00 bis 13:00 Uhr.",
+  },
+  {
+    question: "Welche Leistungen bietet das Autocenter Kaddoura an?",
+    answer:
+      "Zum Angebot gehören persönliche Fahrzeugberatung, Probefahrten, faire Inzahlungnahme, Online-Besichtigungen, Zulassungsservice, optionale Gebrauchtwagengarantie und Unterstützung beim internationalen Fahrzeugverkauf.",
+  },
 {
   question: "Wie schnell erhalte ich mein Fahrzeug?",
   answer:

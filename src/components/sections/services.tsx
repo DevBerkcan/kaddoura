@@ -55,7 +55,10 @@ export function Services() {
           ))}
         </div>
         <Reveal delay={0.38}>
-          <div className="mt-10 flex justify-center">
+          <div className="mt-10 flex flex-wrap gap-3 justify-center">
+            <MagneticButton href="/leistungen" variant="secondary">
+              Alle Leistungen im Detail
+            </MagneticButton>
             <MagneticButton href="/#kontakt" variant="primary">
               Service zum Fahrzeugkauf anfragen
             </MagneticButton>

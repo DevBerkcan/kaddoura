@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SEO_KEYWORDS, SITE } from "@/lib/constants";
-import { generateBreadcrumbSchema, generateVehicleItemListSchema } from "@/lib/seo-schema";
+import {
+  generateBreadcrumbSchema,
+  generateVehicleCollectionPageSchema,
+  generateVehicleItemListSchema,
+} from "@/lib/seo-schema";
 import { CarShowroom } from "@/components/sections/car-showroom";
 
 export const metadata: Metadata = {
-  title: "Fahrzeuge kaufen in Wuppertal | Aktuelle Gebrauchtwagen",
+  title: {
+    absolute: "Aktuelle Gebrauchtwagen | Autocenter Kaddoura Wuppertal",
+  },
   description:
     "Aktuelle Gebrauchtwagen und Jahreswagen bei Autocenter Kaddoura in Wuppertal. Geprüfte Fahrzeuge, faire Preise, Probefahrt, Inzahlungnahme und schnelle Zulassung.",
   keywords: [...SEO_KEYWORDS, "Fahrzeuge Wuppertal", "Volvo Wuppertal"],
@@ -31,6 +38,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: "Fahrzeuge", url: `${SITE.url}/fahrzeuge` },
 ]);
 const vehicleItemListSchema = generateVehicleItemListSchema();
+const vehicleCollectionPageSchema = generateVehicleCollectionPageSchema();
 
 export default function FahrzeugePage() {
   return (
@@ -42,6 +50,10 @@ export default function FahrzeugePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(vehicleItemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(vehicleCollectionPageSchema) }}
       />
       <main className="min-h-screen bg-white pt-28 pb-24">
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10">
@@ -60,6 +72,10 @@ export default function FahrzeugePage() {
               Qualitätsfahrzeuge, transparente Beratung, faire Inzahlungnahme,
               Probefahrt und schnelle Zulassung aus einer Hand.
             </p>
+            <nav aria-label="Informationen zum Fahrzeugkauf" className="flex flex-wrap gap-4 mt-5 text-sm font-semibold text-brand-primary">
+              <Link href="/leistungen">Leistungen rund um den Fahrzeugkauf</Link>
+              <Link href="/wissen/gebrauchtwagenkauf">Ratgeber zum Gebrauchtwagenkauf</Link>
+            </nav>
           </div>
           <CarShowroom />
         </div>

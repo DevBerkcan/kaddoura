@@ -62,9 +62,14 @@ export function About() {
           </Reveal>
           <Reveal delay={0.32}>
             <div className="mt-8">
-              <MagneticButton href="/fahrzeuge" variant="secondary">
-                Gebrauchtwagenbestand ansehen
-              </MagneticButton>
+              <div className="flex flex-wrap gap-3">
+                <MagneticButton href="/fahrzeuge" variant="secondary">
+                  Gebrauchtwagenbestand ansehen
+                </MagneticButton>
+                <MagneticButton href="/ueber-uns" variant="ghost">
+                  Mehr über unser Autohaus
+                </MagneticButton>
+              </div>
             </div>
           </Reveal>
         </div>

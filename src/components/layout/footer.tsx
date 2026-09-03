@@ -3,10 +3,10 @@ import Image from "next/image";
 import { SITE } from "@/lib/constants";
 
 const quickLinks = [
-  { label: "Über uns", href: "/#ueber-uns" },
+  { label: "Über uns", href: "/ueber-uns" },
   { label: "Fahrzeuge", href: "/fahrzeuge" },
-  { label: "Services", href: "/#services" },
-  { label: "Team", href: "/#team" },
+  { label: "Leistungen", href: "/leistungen" },
+  { label: "Ratgeber", href: "/wissen" },
   { label: "Kontakt", href: "/#kontakt" },
 ];
 

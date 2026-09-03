@@ -8,7 +8,7 @@ import { ParticleCanvas } from "@/components/three/particle-canvas";
 import { MagneticButton } from "@/components/motion/magnetic-button";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { useCounter } from "@/hooks/use-counter";
-import { SITE, IMAGES, STATS } from "@/lib/constants";
+import { IMAGES, STATS } from "@/lib/constants";
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -101,12 +101,11 @@ export function Hero() {
 
         <motion.h1
           variants={fadeUp}
-          className="font-display font-extrabold text-brand-tertiary leading-[1.02] mt-2 max-w-[700px] "
-          style={{ fontSize: "clamp(48px, 8vw, 96px)" }}
+          className="font-display font-extrabold text-brand-tertiary leading-[1.04] mt-3 max-w-[900px]"
+          style={{ fontSize: "clamp(42px, 5.4vw, 72px)" }}
         >
-          Hochwertige Jahres-
+          <span className="md:whitespace-nowrap">Hochwertige Jahres- und</span>
           <br />
-          und{" "}
           <span className="bg-gradient-to-r from-brand-tertiary to-brand-primary/60 bg-clip-text text-transparent ">
             Gebrauchtwagen
           </span>
@@ -114,11 +113,12 @@ export function Hero() {
 
         <motion.p
           variants={fadeUp}
-          className="font-body text-[var(--text-muted)] max-w-[480px] leading-relaxed mt-7 mb-9 "
-          style={{ fontSize: "clamp(15px, 1.6vw, 17px)" }}
+          className="font-body text-[var(--text-muted)] max-w-[560px] leading-[1.6] mt-5 mb-8"
+          style={{ fontSize: "clamp(14px, 1.4vw, 16px)" }}
         >
-          {SITE.description} Bei uns finden Sie geprüfte Fahrzeuge, faire
-          Inzahlungnahme, Probefahrt und schnelle Zulassung direkt vor Ort.
+          Seit über 25 Jahren Ihr verlässlicher Partner für hochwertige Jahres-
+          und Gebrauchtwagen – mit persönlichem Service, fairer Inzahlungnahme
+          und Probefahrt direkt vor Ort.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex gap-3.5 flex-wrap">

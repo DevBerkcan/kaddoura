@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
@@ -52,23 +52,15 @@ export function FAQ() {
                 </motion.div>
               </button>
 
-              <AnimatePresence>
-                {openIndex === i && (
-                  <motion.div
-                    id={`faq-panel-${i}`}
-                    role="region"
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <p className="font-body text-sm text-[var(--text-body)] leading-relaxed pb-5">
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <div
+                id={`faq-panel-${i}`}
+                role="region"
+                hidden={openIndex !== i}
+              >
+                <p className="font-body text-sm text-[var(--text-body)] leading-relaxed pb-5">
+                  {faq.answer}
+                </p>
+              </div>
             </div>
           </Reveal>
         ))}

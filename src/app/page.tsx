@@ -10,15 +10,28 @@ import { PhotoGallery } from "@/components/sections/photo-gallery";
 import { Reviews } from "@/components/sections/reviews";
 import { FAQ } from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
-import { generateBreadcrumbSchema, generateFAQSchema, generateServiceSchema } from "@/lib/seo-schema";
+import {
+  generateBreadcrumbSchema,
+  generateFAQSchema,
+  generateHomePageSchema,
+  generateOrganizationSchema,
+  generateServiceSchema,
+  generateWebsiteSchema,
+} from "@/lib/seo-schema";
 import { FAQS, SEO_KEYWORDS, SITE } from "@/lib/constants";
+import { getCars } from "@/lib/cars";
 
 const faqSchema = generateFAQSchema(FAQS);
 const serviceSchema = generateServiceSchema();
 const breadcrumbSchema = generateBreadcrumbSchema([{ name: "Startseite", url: SITE.url }]);
+const organizationSchema = generateOrganizationSchema();
+const websiteSchema = generateWebsiteSchema();
+const homePageSchema = generateHomePageSchema();
 
 export const metadata: Metadata = {
-  title: "Gebrauchtwagen & Jahreswagen in Wuppertal kaufen",
+  title: {
+    absolute: "Gebrauchtwagen & Jahreswagen | Autocenter Kaddoura Wuppertal",
+  },
   description:
     "Autocenter Kaddoura in Wuppertal: geprüfte Gebrauchtwagen und Jahreswagen, faire Inzahlungnahme, Probefahrt, Zulassung und persönliche Beratung. Jetzt Fahrzeug finden.",
   keywords: [...SEO_KEYWORDS],
@@ -42,14 +55,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const inventory = await getCars();
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }} />
       <Hero />
-      <CarGallery />
+      <CarGallery
+        initialCars={inventory.cars.slice(0, 6)}
+        initialTotal={inventory.total}
+      />
       <About />
       <HowItWorks />
       <Team />

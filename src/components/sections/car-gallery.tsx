@@ -6,20 +6,7 @@ import Link from "next/link";
 import { ArrowRight, Gauge, Calendar, Fuel, Zap } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
-
-type Car = {
-  id: number;
-  name: string;
-  meta: string;
-  price: number | null;
-  mileage: number;
-  year: string;
-  fuel: string;
-  ps: number;
-  state: string;
-  image: string | null;
-  href: string;
-};
+import type { InventoryCar } from "@/lib/cars";
 
 const PREVIEW = 6;
 
@@ -45,10 +32,16 @@ function SkeletonCard() {
   );
 }
 
-export function CarGallery() {
-  const [cars, setCars] = useState<Car[]>([]);
-  const [total, setTotal] = useState(0);
-  const [loading, setLoading] = useState(true);
+export function CarGallery({
+  initialCars = [],
+  initialTotal = 0,
+}: {
+  initialCars?: InventoryCar[];
+  initialTotal?: number;
+}) {
+  const [cars, setCars] = useState<InventoryCar[]>(initialCars);
+  const [total, setTotal] = useState(initialTotal);
+  const [loading, setLoading] = useState(initialCars.length === 0);
 
   useEffect(() => {
     fetch("/api/cars")
