@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Disc3, ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { MagneticButton } from "@/components/motion/magnetic-button";
@@ -16,8 +17,20 @@ export function KleinanzeigenCta() {
 
             <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
               <div className="max-w-[560px]">
-                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center text-white mb-5">
-                  <Disc3 size={22} />
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-11 h-11 shrink-0 rounded-xl bg-white/10 flex items-center justify-center text-white">
+                    <Disc3 size={22} />
+                  </div>
+                  <div className="inline-flex items-center bg-white rounded-lg px-3 py-2">
+                    <Image
+                      src="/logos/kleinanzeigen-logo.svg"
+                      alt="Kleinanzeigen"
+                      width={140}
+                      height={24}
+                      unoptimized
+                      className="h-4 w-auto"
+                    />
+                  </div>
                 </div>
                 <h3 className="font-display font-extrabold text-white leading-tight mb-3 text-[26px] sm:text-[30px]">
                   Große Auswahl an Originalrädern &amp; Kompletträdern
